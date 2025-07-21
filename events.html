@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 活动</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="events/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(events/res/bg-events.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h2{font-size:2em;margin:35px 0 15px;color:var(--mc-green);}
+p,ul,ol{margin-bottom:15px;color:#ddd;}
+ul,ol{margin-left:22px;}
+li{margin-bottom:8px;}
+.event-card{
+  background:var(--card);border-radius:12px;padding:25px;margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.event-card:hover{transform:translateY(-4px);}
+.event-card h3{font-size:1.4em;margin-bottom:10px;color:var(--mc-green);}
+.btn{
+  display:inline-block;padding:12px 24px;background:var(--mc-green);color:#000;
+  font-weight:bold;border-radius:50px;text-decoration:none;transition:.3s;
+}
+.btn:hover{transform:translateY(-2px);}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="events/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<main>
+
+  <h1>活动页面</h1>
+
+  <!-- 即将举办 -->
+  <section>
+    <h2>即将举办的活动</h2>
+    <p>目前暂无具体日程，但团队正在策划中！请通过以下渠道第一时间获取通知：</p>
+    <ul>
+      <li>论坛公告：<a href="https://github.com/minzzj/minzzj/discussions" style="color:var(--mc-green);">官方论坛</a></li>
+      <li>QQ群通知：62083177</li>
+      <li>官方微信：zzj_zhangzijun_zzj</li>
+    </ul>
+  </section>
+
+  <!-- 活动建议 -->
+  <section>
+    <h2>活动建议与反馈</h2>
+    <p>你的创意就是下一期活动的灵感！反馈方式：</p>
+    <ol>
+      <li>论坛发帖：在活动建议板块留言。</li>
+      <li>QQ群私信：直接找管理员。</li>
+      <li>邮箱：<a href="mailto:minzzj@qq.com" style="color:var(--mc-green);">minzzj@qq.com</a></li>
+    </ol>
+  </section>
+
+  <!-- 过往回顾 -->
+  <section>
+    <h2>过往活动回顾</h2>
+    <div class="event-card">
+      <h3>建筑大赛</h3>
+      <p>玩家展示了从古罗马竞技场到未来城市的惊世作品，创意无限。</p>
+    </div>
+    <div class="event-card">
+      <h3>生存挑战</h3>
+      <p>在极限条件下挑战自我，展现了出色的生存技能与团队合作。</p>
+    </div>
+    <div class="event-card">
+      <h3>红石竞赛</h3>
+      <p>红石专家设计了从自动农场到复杂逻辑电路的机械装置，令人叹为观止。</p>
+    </div>
+  </section>
+
+  <!-- 参与好处 -->
+  <section>
+    <h2>参与活动的好处</h2>
+    <ul>
+      <li>丰厚奖励：游戏币、限定皮肤、称号、头像框</li>
+      <li>提升技能：挑战任务中快速成长</li>
+      <li>社交互动：结识志同道合的伙伴</li>
+      <li>展示才华：建筑大师、生存高手、红石专家的专属舞台</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>

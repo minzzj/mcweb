@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 管理团队</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="team/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(team/res/bg-team.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h1{font-size:2.4em;margin-bottom:30px;text-align:center;color:var(--mc-green);}
+.team-card{
+  background:var(--card);border-radius:16px;padding:30px;margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.team-card:hover{transform:translateY(-5px);}
+.team-card h3{font-size:1.5em;margin-bottom:10px;color:var(--mc-green);}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="team/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<main>
+  <h1>管理团队</h1>
+
+  <!-- 管理员 -->
+  <div class="team-card">
+    <h3>管理员</h3>
+    <p><strong>ID：</strong>zhang_zi_jun</p>
+    <ul>
+      <li>负责服务器整体管理与维护</li>
+      <li>处理玩家投诉与建议</li>
+      <li>监督日常运营与公平环境</li>
+    </ul>
+    <p>QQ：2163476921</p>
+  </div>
+
+  <!-- 开发者 -->
+  <div class="team-card">
+    <h3>开发者</h3>
+    <p><strong>姓名：</strong>石先航</p>
+    <ul>
+      <li>负责服务器插件开发与优化</li>
+      <li>定期更新功能与内容</li>
+      <li>解决游戏内技术问题</li>
+    </ul>
+  </div>
+
+  <!-- 社区经理 -->
+  <div class="team-card">
+    <h3>社区经理</h3>
+    <p><strong>姓名：</strong>韩浩宇</p>
+    <ul>
+      <li>策划并组织社区活动</li>
+      <li>管理官方论坛与社交媒体</li>
+      <li>维护良好社区氛围</li>
+    </ul>
+  </div>
+
+  <!-- 客服支持 -->
+  <div class="team-card">
+    <h3>客服支持</h3>
+    <ul>
+      <li>解答玩家问题与投诉</li>
+      <li>处理账号安全与反馈</li>
+    </ul>
+    <p>QQ群：62083177</p>
+  </div>
+
+  <!-- 安全团队 -->
+  <div class="team-card">
+    <h3>安全团队</h3>
+    <ul>
+      <li>监控服务器安全与反作弊</li>
+      <li>处理举报与违规行为</li>
+    </ul>
+  </div>
+
+  <!-- 联系我们 -->
+  <div class="team-card">
+    <h3>联系我们</h3>
+    <p>QQ群：62083177</p>
+    <p>反馈邮箱：<a href="mailto:minzzj@qq.com" style="color:var(--mc-green);">minzzj@qq.com</a></p>
+  </div>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>

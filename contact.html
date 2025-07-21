@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>联系我们 - Minzzj 服务器</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="contact/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(contact/res/bg-contact.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h1{font-size:2.4em;margin-bottom:30px;text-align:center;color:var(--mc-green);}
+h2{font-size:1.8em;margin:30px 0 15px;color:var(--mc-green);}
+.contact-card{
+  background:var(--card);border-radius:16px;padding:25px;margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.contact-card:hover{transform:translateY(-4px);}
+.contact-card h3{font-size:1.4em;margin-bottom:10px;color:var(--mc-green);}
+.qr-contact{width:200px;border:4px solid var(--mc-green);border-radius:12px;transition:transform .3s;}
+.qr-contact:hover{transform:scale(1.05);}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+<header>
+  <img src="contact/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<main>
+  <h1>联系我们</h1>
+
+  <!-- QQ群 -->
+  <div class="contact-card">
+    <h3>QQ群</h3>
+    <p><strong>群号：62083177</strong></p>
+    <p>用途：日常交流、活动通知、问题解答、文件下载</p>
+    <img src="contact/res/qr-qq.jpg" alt="QQ群二维码" class="qr-contact">
+  </div>
+
+  <!-- 反馈邮箱 -->
+  <div class="contact-card">
+    <h3>反馈邮箱</h3>
+    <p><strong>邮箱地址：</strong><a href="mailto:minzzj@qq.com" style="color:var(--mc-green);">minzzj@qq.com</a></p>
+    <p>用途：提交问题、建议、反馈，我们会尽快回复</p>
+  </div>
+
+  <!-- 官方论坛 -->
+  <div class="contact-card">
+    <h3>官方论坛</h3>
+    <p><strong>论坛地址：</strong><a href="https://github.com/minzzj/minzzj/discussions" style="color:var(--mc-green);">进入论坛</a></p>
+    <p>用途：发布公告、讨论问题、分享经验</p>
+  </div>
+
+  <!-- 社交媒体 -->
+  <div class="contact-card">
+    <h3>社交媒体</h3>
+    <p><strong>抖音：</strong>Minzzj</p>
+    <p><strong>B站：</strong>Minzzj</p>
+  </div>
+
+  <!-- 在线时间 -->
+  <div class="contact-card">
+    <h3>在线时间</h3>
+    <p><strong>管理员 zhang_zi_jun：</strong>周一至周五 19:00-22:00，周六至周日 14:00-22:00</p>
+    <p><strong>社区经理 韩浩宇：</strong>周六、周日 15:00-21:00</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>

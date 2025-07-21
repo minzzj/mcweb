@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 常见问题</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="faq/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(faq/res/bg-faq.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h1{font-size:2.4em;margin-bottom:30px;text-align:center;color:var(--mc-green);}
+h2{font-size:1.8em;margin:30px 0 15px;color:var(--mc-green);}
+.q-card{
+  background:var(--card);border-radius:12px;padding:25px;margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.q-card:hover{transform:translateY(-4px);}
+.q-card h3{font-size:1.4em;margin-bottom:10px;color:var(--mc-green);}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="faq/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<main>
+  <h1>常见问题 FAQ</h1>
+
+  <!-- 新手问题 -->
+  <h2>新手问题</h2>
+  <div class="q-card">
+    <h3>如何加入 Minzzj 服务器？</h3>
+    <p>在游戏内输入服务器 IP：<strong>minzzj.fun:32779</strong> 或备用 IP <strong>play.simpfun.cn:32779</strong>，点击“加入服务器”即可。</p>
+  </div>
+  <div class="q-card">
+    <h3>服务器支持哪些版本？</h3>
+    <p>目前支持 <strong>Java 1.21</strong>。请确保客户端版本一致，否则无法连接。</p>
+  </div>
+  <div class="q-card">
+    <h3>如何获取资源？</h3>
+    <p>生存模式通过砍树、挖矿、狩猎等正常方式获取，也可与玩家交易稀有资源。</p>
+  </div>
+  <div class="q-card">
+    <h3>如何与其他玩家互动？</h3>
+    <p>使用聊天功能交流，或加入 QQ群 62083177 实时沟通。</p>
+  </div>
+
+  <!-- 游戏问题 -->
+  <h2>游戏问题</h2>
+  <div class="q-card">
+    <h3>连接失败怎么办？</h3>
+    <p>检查网络、确认 IP 正确；仍有问题使用备用 IP 或联系管理员。</p>
+  </div>
+  <div class="q-card">
+    <h3>游戏卡顿如何解决？</h3>
+    <p>关闭高占用程序、降低画质；若持续卡顿请向客服反馈。</p>
+  </div>
+  <div class="q-card">
+    <h3>如何获取游戏币？</h3>
+    <p>参与活动、完成任务或捐助服务器均可获得游戏币。</p>
+  </div>
+  <div class="q-card">
+    <h3>常用指令有哪些？</h3>
+    <p><code>/tp &lt;玩家名&gt;</code> 传送、<code>/spawn</code> 回到出生点、<code>/msg &lt;玩家名&gt; &lt;消息&gt;</code> 私聊。</p>
+  </div>
+
+  <!-- 社区问题 -->
+  <h2>社区问题</h2>
+  <div class="q-card">
+    <h3>如何加入 QQ群？</h3>
+    <p>搜索群号 <strong>62083177</strong> 并申请加入，遵守群规即可。</p>
+  </div>
+  <div class="q-card">
+    <h3>如何在论坛发帖？</h3>
+    <p>访问 <a href="https://github.com/minzzj/minzzj/discussions" style="color:var(--mc-green);">官方论坛</a>，注册后可在相应板块发帖。</p>
+  </div>
+  <div class="q-card">
+    <h3>如何参与社区活动？</h3>
+    <p>关注论坛公告、QQ群通知，按规则报名即可。</p>
+  </div>
+
+  <!-- 捐助问题 -->
+  <h2>捐助问题</h2>
+  <div class="q-card">
+    <h3>如何进行捐助？</h3>
+    <p>支持支付宝 18553380065 与微信 zzj_zhangzijun_zzj，备注游戏 ID 即可。</p>
+  </div>
+  <div class="q-card">
+    <h3>捐助后如何获得奖励？</h3>
+    <p>付款后联系 QQ 2163476921 或邮箱 minzzj@qq.com 提供信息，管理员即时发放。</p>
+  </div>
+  <div class="q-card">
+    <h3>捐助是否安全？</h3>
+    <p>使用官方渠道，严格保护个人信息，所有捐助仅用于服务器维护与运营。</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>

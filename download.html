@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 下载中心</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="download/res/favicon.ico">
+<style>
+/* ===== 全局变量 ===== */
+:root{
+  --primary:#5BC236;
+  --bg:#0a0a0a;
+  --card:#181818;
+  --glass:rgba(0,0,0,.55);
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--bg) url(download/res/bg-end-sky.jpg) center/cover fixed no-repeat;
+  color:var(--text);line-height:1.6;
+}
+
+/* ===== 导航栏（与主页完全一致） ===== */
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 40px;
+  background:var(--glass);
+  backdrop-filter:blur(8px);
+  position:sticky;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+}
+.logo{height:45px;}
+nav a{
+  color:#fff;
+  margin:0 14px;
+  font-weight:bold;
+  text-decoration:none;
+  position:relative;
+}
+nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0;
+  height:2px;
+  background:var(--primary);
+  transition:width .3s;
+}
+nav a:hover{color:#fff;}
+nav a:hover::after{width:100%;}
+
+/* ===== 主容器 ===== */
+main{max-width:1000px;margin:0 auto;padding:40px 20px;}
+.hero{text-align:center;margin-bottom:50px;}
+.hero h1{font-size:2.6em;margin-bottom:10px;}
+section{margin:60px 0;}
+
+/* ===== 卡片 ===== */
+.cards{display:flex;gap:40px;flex-wrap:wrap;justify-content:center;}
+.card{
+  width:280px;background:var(--card);border-radius:16px;
+  padding:30px;text-align:center;transition:transform .3s;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+.card:hover{transform:translateY(-8px);}
+.card img{width:80px;height:80px;margin-bottom:15px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:50px;font-weight:bold;text-decoration:none;
+}
+.btn.primary{background:var(--primary);color:#000;}
+.btn.secondary{background:#444;color:#fff;}
+.tip{font-size:.9em;color:#aaa;margin-top:10px;}
+.guide{margin:15px 0 0 20px;list-style:decimal;}
+
+/* ===== 视频网格 ===== */
+.video-grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;}
+.video-card{background:var(--card);border-radius:12px;padding:15px;width:180px;text-align:center;}
+.video-card img{width:40px;height:40px;}
+
+/* ===== 页脚 ===== */
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+
+<!-- 导航 -->
+<header>
+  <img src="download/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<main>
+  <section class="hero">
+    <h1>下载中心</h1>
+    <p>获取客户端、资源包与完整教程，一步踏入 Minzzj 世界。</p>
+  </section>
+
+  <!-- 客户端 -->
+  <section>
+    <h2>游戏客户端</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="download/res/icon-java.png" alt="Java 版">
+        <h3>Minecraft Java 1.21</h3>
+        <p>官方正版 / 兼容 Minzzj 服务器</p>
+        <a class="btn primary" href="https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition/pc" target="_blank">
+          <img src="download/res/btn-download.png" alt=""> 立即下载
+        </a>
+      </div>
+      <div class="card">
+        <img src="download/res/icon-bedrock.png" alt="基岩版">
+        <h3>Minecraft 基岩版</h3>
+        <p>Win10 / 安卓 / iOS 均可</p>
+        <a class="btn secondary" href="https://www.minecraft.net/zh-hans/store/minecraft-java-bedrock-edition/pc" target="_blank">
+          <img src="download/res/btn-download.png" alt=""> 立即下载
+        </a>
+      </div>
+    </div>
+    <p class="tip">请务必选择 <strong>Java 1.21</strong> 版本，否则无法进入服务器！</p>
+  </section>
+
+  <!-- 资源包 -->
+  <section>
+    <h2>Minzzj 专属资源包</h2>
+    <p>高清纹理 + UI 美化 + 音效增强，一键安装。</p>
+    <a class="btn primary" href="download/res/minzzj-resourcepack.zip" download>
+      <img src="download/res/icon-resource.png" alt=""> 资源包 16 MB
+    </a>
+    <ol class="guide">
+      <li>下载 zip 文件，不要解压。</li>
+      <li>游戏内：选项 → 资源包 → 打开文件夹。</li>
+      <li>把 zip 放进去 → 回到游戏 → 启用。</li>
+    </ol>
+  </section>
+
+  <!-- 视频教程 -->
+  <section>
+    <h2>视频教程</h2>
+    <div class="video-grid">
+      <a href="download/res/tutorial-connect.mp4" target="_blank" class="video-card">
+        <img src="download/res/btn-video.png" alt=""><br>如何连接服务器
+      </a>
+      <a href="download/res/tutorial-resource.mp4" target="_blank" class="video-card">
+        <img src="download/res/btn-video.png" alt=""><br>如何安装资源包
+      </a>
+      <a href="download/res/tutorial-command.mp4" target="_blank" class="video-card">
+        <img src="download/res/btn-video.png" alt=""><br>常用指令教学
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+</body>
+</html>

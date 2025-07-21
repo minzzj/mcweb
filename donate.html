@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 捐助</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="donate/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(donate/res/bg-donate.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h1{font-size:2.4em;margin-bottom:30px;text-align:center;color:var(--mc-green);}
+h2{font-size:1.8em;margin:35px 0 15px;color:var(--mc-green);}
+p,li{font-size:1.05em;color:#ddd;margin-bottom:12px;}
+.donate-card{
+  background:var(--card);border-radius:16px;padding:30px;margin-bottom:30px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.donate-card:hover{transform:translateY(-5px);}
+.qr-donate{width:200px;border:4px solid var(--mc-green);border-radius:12px;transition:transform .3s;}
+.qr-donate:hover{transform:scale(1.05);}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:50px;font-weight:bold;text-decoration:none;
+}
+.btn.primary{background:var(--mc-green);color:#000;}
+.btn.secondary{background:#444;color:#fff;}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+<header>
+  <img src="donate/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+  </nav>
+</header>
+
+<main>
+  <h1>捐助 Minzzj 服务器</h1>
+
+  <!-- 捐助说明 -->
+  <div class="donate-card">
+    <h2>捐助用途</h2>
+    <ul>
+      <li>服务器硬件升级与网络优化</li>
+      <li>插件开发与功能扩展</li>
+      <li>社区活动奖品与福利</li>
+      <li>反作弊系统持续维护</li>
+    </ul>
+  </div>
+
+  <!-- 捐助方式 -->
+  <div class="donate-card">
+    <h2>捐助方式</h2>
+    <p><strong>支付宝</strong>：18553380065（付款备注游戏 ID）</p>
+    <p><strong>微信支付</strong>：zzj_zhangzijun_zzj（付款备注游戏 ID）</p>
+    <img src="donate/res/qr-wepay.jpg" alt="微信支付二维码" class="qr-donate">
+    <p>如需其他方式（银行转账等），请联系 <a href="mailto:minzzj@qq.com" style="color:var(--mc-green);">minzzj@qq.com</a></p>
+  </div>
+
+  <!-- 捐助奖励 -->
+  <div class="donate-card">
+    <h2>捐助奖励</h2>
+    <ul>
+      <li>专属称号：游戏内展示“捐助者”标识</li>
+      <li>优先体验：新功能、新地图、新活动优先进入</li>
+      <li>感谢名单：官网永久展示捐助者昵称</li>
+      <li>游戏币赠送：按金额比例发放</li>
+    </ul>
+  </div>
+
+  <!-- 金额建议 -->
+  <div class="donate-card">
+    <h2>捐助金额建议</h2>
+    <ul>
+      <li><strong>10 元</strong>：专属称号 + 感谢名单</li>
+      <li><strong>20 元</strong>：+ 游戏币 2000</li>
+      <li><strong>50 元及以上</strong>：+ 优先体验 + 更多游戏币</li>
+    </ul>
+    <a class="btn primary" href="res/qr-wepay.jpg" download>下载微信支付二维码</a>
+  </div>
+
+  <!-- 捐助确认 -->
+  <div class="donate-card">
+    <h2>捐助确认</h2>
+    <p>付款后请联系：</p>
+    <ul>
+      <li>QQ：2163476921</li>
+      <li>邮箱：minzzj@qq.com</li>
+      <li>微信：zzj_zhangzijun_zzj</li>
+    </ul>
+    <p>请提供：游戏ID、捐助金额、捐助方式、期望奖励。</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>
