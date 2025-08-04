@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 商店</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="shop/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(shop/res/bg-shop.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:1000px;margin-left:auto;margin-right:auto;}
+h1{font-size:2.4em;margin-bottom:30px;text-align:center;color:var(--mc-green);}
+h2{font-size:1.8em;margin:30px 0 15px;color:var(--mc-green);}
+.vip-card{
+  background:var(--card);border-radius:16px;padding:25px;margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.vip-card:hover{transform:translateY(-5px);}
+.vip-card h3{font-size:1.5em;margin-bottom:10px;color:var(--mc-green);}
+.price{font-size:1.2em;color:var(--mc-green);font-weight:bold;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:50px;font-weight:bold;text-decoration:none;
+}
+.btn.primary{background:var(--mc-green);color:#000;}
+.btn.secondary{background:#444;color:#fff;}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+@media(max-width:600px){.vip-card{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="shop/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+    <a href="shop.html">VIP商店</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Minzzj 商店 · 零属性 VIP</h1>
+
+  <!-- 什么是零属性 VIP -->
+  <section>
+    <p>所有付费内容<strong>仅影响外观与便利功能</strong>，零氪金也能公平游玩！</p>
+  </section>
+
+  <!-- 免费试用 -->
+  <section>
+    <h2>🎁 一元试用</h2>
+    <div class="vip-card">
+      <h3>试用档</h3>
+      <p>彩虹昵称 + 音效 + 粒子</p>
+      <p class="price">一元可以试用7天</p>
+      <p>管理员支付后发放试用码，输入 <code>/usekey &lt;激活码&gt;</code>领取七天</p>
+    </div>
+  </section>
+
+  <!-- VIP 档位 -->
+  <section>
+    <h2>💎 VIP 档位与价格</h2>
+
+    <div class="vip-card">
+      <h3>铜矿</h3>
+      <p>彩色昵称 + 3 种聊天颜色</p>
+      <p class="price">7天 ¥1.99 | 30天 ¥4.99 | 90天 ¥12.99 | 365天 ¥39.99</p>
+    </div>
+
+    <div class="vip-card">
+      <h3>铁锭</h3>
+      <p>铜矿 + Tab 图标 + 死亡特效</p>
+      <p class="price">7天 ¥3.99 | 30天 ¥8.99 | 90天 ¥24.99 | 365天 ¥79.99</p>
+    </div>
+
+    <div class="vip-card">
+      <h3>黄金</h3>
+      <p>铁锭 + 传送冷却-3s + 私聊渐变</p>
+      <p class="price">7天 ¥7.99 | 30天 ¥15.99 | 90天 ¥44.99 | 365天 ¥149.99</p>
+    </div>
+
+    <div class="vip-card">
+      <h3>钻石</h3>
+      <p>黄金 + 随身工作台 + 5 个家</p>
+      <p class="price">7天 ¥14.99 | 30天 ¥29.99 | 90天 ¥89.99 | 365天 ¥299.99</p>
+    </div>
+
+    <div class="vip-card">
+      <h3>合金</h3>
+      <p>钻石 + 专属称号 + 10 个家</p>
+      <p class="price">7天 ¥21.99 | 30天 ¥44.99 | 90天 ¥129.99 | 365天 ¥449.99</p>
+    </div>
+  </section>
+
+  <!-- 购买流程 -->
+  <section>
+    <h2>🛒 如何购买</h2>
+    <ol>
+      <li>完成微信支付（扫码下方二维码）</li>
+      <li>管理员3天内发放激活码至邮箱。    注意：填写邮箱时请注意正确</li>
+      <li>在游戏内输入 <code>/usekey &lt;激活码&gt;</code></li>
+    </ol>
+    <a href="shop/res/qr-wepay.jpg" download class="btn primary">下载支付二维码</a>
+  </section>
+
+  <!-- 常用指令 -->
+  <section>
+    <h2>🔍 常用指令</h2>
+    <ul>
+      <li><code>/usekey &lt;码&gt;</code> — 兑换激活码</li>
+      <li><code>/viptime</code> — 查看剩余 VIP 时长</li>
+    </ul>
+  </section>
+
+  <!-- 官方插件入口 -->
+  <section>
+    <h2>📥 插件官方页面</h2>
+    <a href="https://www.spigotmc.org/resources/pixelvip-1-7-1-20.30438/" target="_blank" class="btn secondary">PixelVip 官方详情</a>
+  </section>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>
