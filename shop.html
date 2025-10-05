@@ -42,11 +42,23 @@ h2{font-size:1.8em;margin:30px 0 15px;color:var(--mc-green);}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
   padding:12px 24px;border-radius:50px;font-weight:bold;text-decoration:none;
+  transition:opacity .3s;
 }
+.btn:hover{opacity:0.9;}
 .btn.primary{background:var(--mc-green);color:#000;}
 .btn.secondary{background:#444;color:#fff;}
+/* 新增跳转提示样式，保持风格统一 */
+.jump-tip{
+  background:var(--card);border-radius:12px;padding:15px;margin:10px 0;
+  border-left:4px solid var(--mc-green);
+}
 footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
-@media(max-width:600px){.vip-card{flex-direction:column;align-items:center;}}
+@media(max-width:600px){
+  .vip-card{flex-direction:column;align-items:center;}
+  header{padding:12px 20px;}
+  nav{gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+  nav a{font-size:.9em;}
+}
 </style>
 </head>
 <body>
@@ -82,7 +94,15 @@ footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;
       <h3>试用档</h3>
       <p>彩虹昵称 + 音效 + 粒子</p>
       <p class="price">一元可以试用7天</p>
-      <p>管理员支付后发放试用码，输入 <code>/usekey &lt;激活码&gt;</code>领取七天</p>
+      <!-- 跳转修改：将原管理员支付改为引导至商城 -->
+      <div class="jump-tip">
+        <p>请前往官方商城完成支付，支付后管理员3天内发放试用码</p>
+        <p>输入 <code>/usekey &lt;激活码&gt;</code>领取七天</p>
+      </div>
+      <!-- 新增商城跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary">
+        前往 shop.minzzj.top 购买
+      </a>
     </div>
   </section>
 
@@ -94,42 +114,67 @@ footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;
       <h3>铜矿</h3>
       <p>彩色昵称 + 3 种聊天颜色</p>
       <p class="price">7天 ¥1.99 | 30天 ¥4.99 | 90天 ¥12.99 | 365天 ¥39.99</p>
+      <!-- 新增对应档位跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:10px;">
+        前往商城购买铜矿VIP
+      </a>
     </div>
 
     <div class="vip-card">
       <h3>铁锭</h3>
       <p>铜矿 + Tab 图标 + 死亡特效</p>
       <p class="price">7天 ¥3.99 | 30天 ¥8.99 | 90天 ¥24.99 | 365天 ¥79.99</p>
+      <!-- 新增对应档位跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:10px;">
+        前往商城购买铁锭VIP
+      </a>
     </div>
 
     <div class="vip-card">
       <h3>黄金</h3>
       <p>铁锭 + 传送冷却-3s + 私聊渐变</p>
       <p class="price">7天 ¥7.99 | 30天 ¥15.99 | 90天 ¥44.99 | 365天 ¥149.99</p>
+      <!-- 新增对应档位跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:10px;">
+        前往商城购买黄金VIP
+      </a>
     </div>
 
     <div class="vip-card">
       <h3>钻石</h3>
       <p>黄金 + 随身工作台 + 5 个家</p>
       <p class="price">7天 ¥14.99 | 30天 ¥29.99 | 90天 ¥89.99 | 365天 ¥299.99</p>
+      <!-- 新增对应档位跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:10px;">
+        前往商城购买钻石VIP
+      </a>
     </div>
 
     <div class="vip-card">
       <h3>合金</h3>
       <p>钻石 + 专属称号 + 10 个家</p>
       <p class="price">7天 ¥21.99 | 30天 ¥44.99 | 90天 ¥129.99 | 365天 ¥449.99</p>
+      <!-- 新增对应档位跳转按钮 -->
+      <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:10px;">
+        前往商城购买合金VIP
+      </a>
     </div>
   </section>
 
   <!-- 购买流程 -->
   <section>
     <h2>🛒 如何购买</h2>
+    <!-- 修改购买流程：替换扫码支付为商城跳转 -->
     <ol>
-      <li>完成微信支付（扫码下方二维码）</li>
+      <li>点击对应VIP档位的「前往商城购买」按钮，访问 shop.minzzj.top</li>
+      <li>在商城中选择对应时长的VIP，完成支付</li>
       <li>管理员3天内发放激活码至邮箱。    注意：填写邮箱时请注意正确</li>
       <li>在游戏内输入 <code>/usekey &lt;激活码&gt;</code></li>
     </ol>
-    <a href="shop/res/qr-wepay.jpg" download class="btn primary">下载支付二维码</a>
+    <!-- 移除原下载二维码按钮，替换为商城入口按钮 -->
+    <a href="https://shop.minzzj.top" target="_blank" class="btn primary" style="margin-top:15px;">
+      立即访问 shop.minzzj.top
+    </a>
   </section>
 
   <!-- 常用指令 -->
