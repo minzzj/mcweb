@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Minzzj 服务器 - 新闻公告</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="news/res/favicon.ico">
+<style>
+:root{
+  --mc-green:#5BC236;
+  --dark:#0a0a0a;
+  --glass:rgba(0,0,0,.55);
+  --card:#111;
+  --text:#eee;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial;}
+body{
+  background:var(--dark) url(news/res/bg-news.jpg) center/cover fixed;
+  color:var(--text);line-height:1.7;
+}
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 40px;background:var(--glass);backdrop-filter:blur(8px);
+}
+.logo{height:45px;cursor:pointer;transition:transform .3s;}
+.logo:hover{transform:scale(1.1);}
+nav{display:flex;gap:20px;}
+nav a{color:#fff;font-weight:bold;text-decoration:none;position:relative;padding:6px 0;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--mc-green);transition:.3s;}
+nav a:hover::after{width:100%;}
+main{margin-top:69px;padding:40px 20px;max-width:900px;margin-left:auto;margin-right:auto;}
+h2{font-size:2em;margin:35px 0 15px;color:var(--mc-green);}
+p,ul,ol{margin-bottom:15px;color:#ddd;}
+ul,ol{margin-left:22px;}
+li{margin-bottom:8px;}
+.news-card{
+  background:var(--card);border-radius:12px;padding:25px;margin-bottom:25px;
+  box-shadow:0 8px 20px rgba(0,0,0,.4);transition:.3s;
+}
+.news-card:hover{transform:translateY(-4px);}
+.news-card h3{font-size:1.4em;margin-bottom:10px;color:var(--mc-green);}
+.news-card .date{color:#999;font-size:.9em;margin-bottom:15px;}
+.news-card .content{color:#ddd;line-height:1.8;}
+.btn{
+  display:inline-block;padding:12px 24px;background:var(--mc-green);color:#000;
+  font-weight:bold;border-radius:50px;text-decoration:none;transition:.3s;
+}
+.btn:hover{transform:translateY(-2px);}
+footer{background:#000;text-align:center;padding:20px;font-size:.8em;color:#555;}
+</style>
+</head>
+<body>
+
+<header>
+  <img src="news/res/logo-light.png" alt="Minzzj Logo" class="logo">
+  <nav>
+    <a href="index.html">首页</a>
+    <a href="news.html">新闻公告</a>
+    <a href="download.html">下载中心</a>
+    <a href="community.html">社区</a>
+    <a href="rules.html">规则</a>
+    <a href="events.html">活动</a>
+    <a href="donate.html">捐助</a>
+    <a href="team.html">管理团队</a>
+    <a href="faq.html">常见问题</a>
+    <a href="contact.html">联系我们</a>
+    <a href="shop.html">VIP商店</a>
+  </nav>
+</header>
+
+<main>
+
+  <h1>新闻公告</h1>
+
+  <!-- 最新新闻 -->
+  <section>
+    <h2>最新公告</h2>
+    
+    <div class="news-card">
+      <h3>服务器于2006年1月1日进行大型活动的公告</h3>
+      <div class="date">发布时间：2005年12月20日</div>
+      <div class="content">
+        <p>亲爱的玩家们：</p>
+        <p>感谢大家一直以来对Minzzj服务器的支持与厚爱！为了庆祝新年的到来，我们将于2006年1月1日举办一场盛大的服务器活动，诚邀各位玩家积极参与！</p>
+        <p><strong>活动主题：</strong>新年狂欢节</p>
+        <p><strong>活动时间：</strong>2006年1月1日 14:00 - 20:00</p>
+        <p><strong>活动内容：</strong></p>
+        <ul>
+          <li>14:00 - 15:00：新年红包雨活动，在指定区域会掉落大量游戏币和珍贵物品</li>
+          <li>15:00 - 17:00：建筑大赛，以"新年"为主题进行创作，获胜者将获得丰厚奖励</li>
+          <li>17:00 - 18:30：PVP竞技场比赛，多人对战，展现你的战斗技巧</li>
+          <li>18:30 - 20:00：新年篝火晚会，所有玩家聚集在一起，共同迎接新年的到来</li>
+        </ul>
+        <p><strong>活动奖励：</strong></p>
+        <ul>
+          <li>参与奖：所有参与活动的玩家均可获得新年限定称号</li>
+          <li>比赛奖项：各比赛项目的前三名将获得游戏币、稀有物品、VIP特权等奖励</li>
+          <li>幸运抽奖：活动期间会进行多次抽奖，幸运玩家将获得意外惊喜</li>
+        </ul>
+        <p>为了确保活动顺利进行，服务器将于2005年12月31日23:00-2006年1月1日10:00进行维护更新，给大家带来不便，敬请谅解！</p>
+        <p>让我们一起在Minzzj服务器度过一个难忘的新年！</p>
+        <p>Minzzj服务器管理团队</p>
+        <p>2005年12月20日</p>
+      </div>
+    </div>
+    
+    <div class="news-card">
+      <h3>服务器版本更新公告</h3>
+      <div class="date">发布时间：2005年12月15日</div>
+      <div class="content">
+        <p>亲爱的玩家们：</p>
+        <p>我们计划于2005年12月16日进行服务器版本更新，本次更新将带来以下内容：</p>
+        <ul>
+          <li>更新至最新的Minecraft 1.18版本</li>
+          <li>新增多种生物和方块</li>
+          <li>优化服务器性能，提升游戏体验</li>
+          <li>修复已知bug</li>
+        </ul>
+        <p>更新期间服务器将暂时关闭，预计维护时间为2小时。请大家提前做好准备，感谢您的理解与支持！</p>
+      </div>
+    </div>
+    
+    <div class="news-card">
+      <h3>服务器规则更新通知</h3>
+      <div class="date">发布时间：2005年12月10日</div>
+      <div class="content">
+        <p>为了维护良好的游戏环境，我们对服务器规则进行了部分更新，请所有玩家仔细阅读并遵守：</p>
+        <ul>
+          <li>禁止使用任何作弊软件</li>
+          <li>禁止恶意破坏他人建筑</li>
+          <li>禁止发布广告和不良信息</li>
+          <li>尊重其他玩家，禁止辱骂和骚扰</li>
+        </ul>
+        <p>违反规则的玩家将受到相应的处罚，情节严重者将被永久封禁。让我们一起维护一个和谐的游戏社区！</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>版权所有 © Minzzj 服务器</p>
+</footer>
+
+</body>
+</html>
